@@ -3,7 +3,7 @@ import numpy as np
 import Table_transducer as Table_transducer
 from Table_transducer import until_transducer,until_transducer2
 import Table_helper_for_wheel_motor as Table_helper_for_wheel_motor
-from Table_helper_for_wheel_motor import Extract_variable_points1,Extract_variable_points2, Extract_relevant_points,enforcer,warmup_enforcer
+from Table_helper_for_wheel_motor import Extract_variable_points1,Extract_variable_points2, Extract_relevant_points,enforcer
 from collections import defaultdict
 from timeit import default_timer as timer
 import csv
@@ -92,7 +92,6 @@ num_noise_points=[2,4,6,8,10,12,14,16,18,20] #[4]#[0,10,20,30,40,50,60,70,80,90,
 results_dir = os.getenv('OUTPUT_DIR', os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','results'))  # Results dir
 os.makedirs(results_dir, exist_ok=True)
 file_path = os.path.join(results_dir,"Safe_deceleration_of_AVs.csv")  # Create the full path using pathlib
-#warmup_enforcer()
 with open(file_path, "w", newline="") as f:
         writer = csv.writer(f)
         writer.writerow(["#v", "len", "time(s)"])

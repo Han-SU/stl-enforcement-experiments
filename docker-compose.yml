@@ -13,4 +13,4 @@ services:
       - OUTPUT_DIR=/app/results
     working_dir: /app
     command: /app/scripts/run.sh  
-    restart: on-failure        
+    # restart: on-failure        

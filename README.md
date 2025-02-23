@@ -1,5 +1,6 @@
 # STL Property Enforcement Experiment Reproduction
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This repository contains the implementation and reproduction package for the experiments presented in the paper **"Runtime Enforcement of CPS against Signal Temporal Logic"**. The project focuses on runtime enforcement of STL properties using transducer-based monitoring.
 
@@ -55,6 +56,7 @@ pip install numpy==1.26.4 matplotlib==3.8.2
 ```
 ##### 3. Run experiments
 ```bash
+chmod +x run_local.sh
 ./run_local.sh
 ```
 #### Compatibility Notes:
@@ -64,6 +66,6 @@ pip install numpy==1.26.4 matplotlib==3.8.2
 - Results may vary across different OS/hardware
 
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
 

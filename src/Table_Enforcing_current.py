@@ -3,7 +3,7 @@ import numpy as np
 import Table_transducer as Table_transducer
 from Table_transducer import release_transducer
 import Table_helper as Table_helper
-from Table_helper import Extract_variable_points,Extract_relevant_points,enforcer,warmup_enforcer
+from Table_helper import Extract_variable_points,Extract_relevant_points,enforcer
 from collections import defaultdict
 from timeit import default_timer as timer
 # import matplotlib.pyplot as plt
@@ -33,7 +33,6 @@ num_noise_points=[2,4,6,8,10,12,14,16,18,20] #[4]#[0,10,20,30,40,50,60,70,80,90,
 results_dir = os.getenv('OUTPUT_DIR', os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','results'))  # Results dir
 os.makedirs(results_dir, exist_ok=True)
 file_path = os.path.join(results_dir,"Safe_charging_of_AVs.csv")  # Create the full path using pathlib
-#warmup_enforcer()
 with open(file_path, "w", newline="") as f:
         writer = csv.writer(f)
         writer.writerow(["#v", "len", "time(s)"])
