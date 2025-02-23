@@ -1,0 +1,16 @@
+
+services:
+  re-stl:
+    build: 
+      context: .       
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/app/src        
+      - ./res:/app/results     
+    user: "${UID}:${GID}"     
+    environment:
+      - PYTHONUNBUFFERED=1    
+      - OUTPUT_DIR=/app/results
+    working_dir: /app
+    command: /app/scripts/run.sh  
+    restart: on-failure        
