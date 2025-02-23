@@ -18,43 +18,43 @@ This repository contains the implementation and reproduction package for the exp
 
 ## Reproduction Steps
 
-#### Method 1: Docker-Based Execution (Recommended)
-##### 1. Clone repository
+### Method 1: Docker-Based Execution (Recommended)
+#### 1. Clone repository
 ```bash
 git clone https://github.com/Han-SU/stl-enforcement-experiments.git
 cd stl-enforcement-experiments
 ```
 
-##### 2. Build Docker image
+#### 2. Build Docker image
 ```bash
 docker-compose build
 ```
 
-##### 3. Run experiments
+#### 3. Run experiments
 ```bash
 docker-compose up
 ```
-##### 4. Modify source code and re-run (when needed)
+#### 4. Modify source code and re-run (when needed)
 Edit files in src/ directory then:
 ```bash
 docker-compose restart re-stl
 ```
 
-##### 5. View results
+#### 5. View results
 Results will be generated in the `res` directory.
 
-#### Method 2: Local Execution
-##### 1. Install Python 3.12.4 (required)
+### Method 2: Local Execution
+#### 1. Install Python 3.12.4 (required)
 Using pyenv recommended:
 ```bash
 pyenv install 3.12.4
 pyenv local 3.12.4
 ```
-##### 2. Install dependencies
+#### 2. Install dependencies
 ```bash
 pip install numpy==1.26.4 matplotlib==3.8.2
 ```
-##### 3. Run experiments
+#### 3. Run experiments
 ```bash
 chmod +x run_local.sh
 ./run_local.sh
