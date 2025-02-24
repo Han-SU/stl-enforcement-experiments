@@ -1,8 +1,6 @@
 import Table_transducer as Table_transducer
 # import matplotlib.pyplot as plt
 import re
-
-
 def Extract_variable_points(signal1, signal2, time, proposition1, proposition2):  #"s==4.2", "ss<10"
     # add signal at time=0
     change_points = [(time[0], signal1[0])]
@@ -304,25 +302,3 @@ def enforcer(var_rel_points,signal1,signal2,automaton,enforced_output1,enforced_
                 ##########################################################################
                 return
                    
-        
-
-def warmup_enforcer():
-    # ========== 1. 触发模块级初始化 ==========
-    # 重新导入模块确保初始化触发（部分环境可能延迟加载）
-    import importlib
-    import Table_transducer
-    importlib.reload(Table_transducer)
-    
-    dummy_time = [0.0, 1.0]
-    dummy_signal = {0.0: 30.0, 1.0: 30.0}
-
-    var_points = Extract_variable_points(
-        dummy_signal, dummy_signal, dummy_time, 
-        "s<=30.0", "ss==0.0"
-    )
-    
-    var_rel_points, _ = Extract_relevant_points(var_points, 0.5, 1.5)
-    
-    enforcer(var_rel_points,dummy_signal,dummy_signal,Table_transducer.release_transducer,10.0,14.0,0.5,1.5)
-    enforcer(var_rel_points,dummy_signal,dummy_signal,Table_transducer.until_transducer,10.0,14.0,0.5,1.5)    
-

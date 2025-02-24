@@ -59,6 +59,10 @@ pip install numpy==1.26.4 matplotlib==3.8.2
 chmod +x run_local.sh
 ./run_local.sh
 ```
+
+#### 4. View results
+Results will be generated in the `results` directory
+
 #### Compatibility Notes:
 
 - Verified on Python 3.12.4 only
