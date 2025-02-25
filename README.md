@@ -19,7 +19,7 @@ This repository contains the implementation and reproduction package for the exp
 - 4GB+ free disk space
 - Python 3.12.4 (for local execution)
 
----
+
 
 ## 🔧 Reproduction Methods
 
@@ -73,7 +73,7 @@ chmod +x run_local.sh
 #### 4. View results
 Results will be generated in the `results` directory
 
----
+
 
 ## ⚠️ Compatibility Notes
 
