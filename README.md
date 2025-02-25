@@ -4,7 +4,6 @@
 
 This repository contains the implementation and reproduction package for the experiments presented in the paper **"Runtime Enforcement of CPS against Signal Temporal Logic"**, implementing transducer-based monitoring for STL property enforcement.
 
----
 
 ## 📋 Prerequisites
 
