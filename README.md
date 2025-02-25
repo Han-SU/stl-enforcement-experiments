@@ -30,6 +30,13 @@ cd stl-enforcement-experiments
 docker-compose build
 ```
 
+If you fail to build the image because of fail to resolve source metadata for Python, you may try to pull the python first, then build the image using 
+```bash
+docker pull python:3.12.4-slim
+docker-compose build
+```
+This Error happen when we trying to reproduce the docker image in Linux.
+
 #### 3. Run experiments
 ```bash
 docker-compose up
