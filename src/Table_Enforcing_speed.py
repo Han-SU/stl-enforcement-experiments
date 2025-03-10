@@ -19,6 +19,7 @@ sampling_rate = 100  # samples per second
 total_duration = 11.0  # seconds
 time = np.round(np.linspace(0, total_duration, int(total_duration * sampling_rate)), 1)
 
+np.random.seed(0)  # For reproducibility
 # Step 1: Define the speed signal with initial value of 30
 initial_speed = 30
 speed = {t: initial_speed for t in time}

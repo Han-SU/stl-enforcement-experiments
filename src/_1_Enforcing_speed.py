@@ -138,7 +138,7 @@ for T in range(1, int(max(time_stamps)) + 2): 	# T=1,2,3, ...
             # print("\n Output timed word from the transducer:", var_rel_points)
             # print("\n length of Input timed word:", len(var_rel_points))
 
-            plt.figure(figsize=(10, 6))
+            plt.figure(figsize=(7, 6))
             plt.plot(list(speed_corrected.keys()), list(speed_corrected.values()), label="Corrected signal", color='blue')
             plt.plot(list(speed_noisy.keys()), list(speed_noisy.values()), label="Original signal", color='orange', linestyle='--')
             plt.xlabel("Time (seconds)", fontsize=14)
